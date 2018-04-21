@@ -175,7 +175,7 @@ namespace app
                     }
                 }
 
-
+                 
                 int* addsumArray =stackalloc int[104];
                     for (int i = 0; i < 13; i++)
                     {
