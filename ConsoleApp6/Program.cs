@@ -26,7 +26,7 @@ namespace app
             stopwatch.Start();
 
            int[] ans = new int[100];
-           int[][] arr = new int[8][];
+           int[][] arr = new int[80][];
 
 
            long[] aArray = new long[1000000];
@@ -145,11 +145,11 @@ namespace app
                 int[] nolistArray = NoList.ToArray();
                 
                 //    for (int c = 0; c < 1000; c++)
-                Parallel.For(0, 8, c =>
+                Parallel.For(0, 80, c =>
                   {
                       arr[c] = new int[104];
-                      int last = c * 125000 + 125000;
-                      for (int i = c * 125000; i < last; i++)
+                      int last = c * 12500 + 12500;
+                      for (int i = c * 12500; i < last; i++)
                           //    for (int i = 0; i < 1000; i++)
                           for (int k = 0; k < 100; k++)
                           {
@@ -163,7 +163,7 @@ namespace app
 
 
                 Vector256<int>[] addsum = new Vector256<int>[13];
-                for (int i = 0; i < 8; i++)
+                for (int i = 0; i < 80; i++)
                 {
                     fixed (int* parr = arr[i])
                     {
